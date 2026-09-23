@@ -1,0 +1,7 @@
+# 云端部署依赖清单（Streamlit Community Cloud 自动安装）
+# 版本策略：精确锁定到本地已完整回归（AppTest 35 项）验证过的 patch 版本，
+# 避免上游新版本引入行为变化；升级版本前请在本地跑全部测试后再改这里。
+streamlit==1.64.0
+requests==2.34.2
+# 浏览器 Cookie 持久化：记住设备昵称实现"打开即自动登录"（Python 侧直接读写）
+streamlit-cookies-controller==0.0.4

@@ -1,0 +1,6 @@
+[browser]
+gatherUsageStats = false
+
+[server]
+# 跳过首次启动的交互式邮箱引导（本地 bat 启动/云端都需要）
+headless = true

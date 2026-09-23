@@ -1,0 +1,19 @@
+# 本地提交前第一道防线：gitleaks 扫描密钥 + 基础格式整理
+# 安装（仅首次）：
+#   pip install pre-commit
+#   pre-commit install
+# 之后每次 git commit 前自动执行；CI 中的 gitleaks 是第二道防线。
+# 手动全量扫描：pre-commit run --all-files
+repos:
+  - repo: https://github.com/gitleaks/gitleaks
+    rev: v8.18.4
+    hooks:
+      - id: gitleaks
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.6.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-added-large-files
+        args: ["--maxkb=2048"]
+      - id: check-merge-conflict

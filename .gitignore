@@ -1,0 +1,28 @@
+# 本地数据库与运行数据（含 API Key，切勿上传）
+data/
+output/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.log
+
+# Streamlit 密钥（绝对不能上传；config.toml 可以上传）
+.streamlit/secrets.toml
+
+# 其他密钥文件保险（.env 类文件永不入库）
+.env
+.env.*
+
+# 本地临时脚本/调试产物（下划线开头；正式测试文件 _apptest_check.py / _t_stream.py 仍可入库）
+_local_*.py
+_tmp_*.py
+_debug_*.py
+
+# 系统/编辑器
+.DS_Store
+.vscode/
+.idea/
+.trae/
